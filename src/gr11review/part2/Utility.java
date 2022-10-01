@@ -10,7 +10,54 @@ public class Utility {
     * @return true or false if xyz is in the middle
     */
     public static boolean xyzMiddle(String x){
+        int intBeforeXyz = 0;
+        int intAfterXyz = 0;
+        boolean isAfterXyz = false;
+        // runs a for loop through the length of the string given
+        for(int i = 0; i < x.length() - 1; i++){
+            // takes the char at the index 
+            char ch = x.charAt(i);
         
+            // checks if the char is "x". 
+            if(ch == 120){
+                // checks if char after is y
+                if(x.charAt(i + 1) == 121){
+                    // checks if char after is z
+                    if(x.charAt(i + 2) == 122){
+                        // Confirms that xyz has been found, and moves the index to after the xyz
+                        isAfterXyz = true;
+                        i += 2;
+                    }
+                }
+            }
+            // if the letters aren't part of the xyz, it'll add to a counter 
+            else{
+                // counts the letters before xyz
+                if(isAfterXyz == false){
+                    intBeforeXyz++;
+                }
+                // counts the letters after xyz
+                else if(isAfterXyz == true){
+                    intAfterXyz++;
+                }
+            }
+
+            
+            
+        }
+        // checks if the before and after xyz counts are close enough
+        if(intBeforeXyz == intAfterXyz){
+            return true;
+        }
+        else if((intBeforeXyz + 1) == intAfterXyz){
+            return true;
+        }
+        else if((intBeforeXyz - 1) == intAfterXyz){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
 
