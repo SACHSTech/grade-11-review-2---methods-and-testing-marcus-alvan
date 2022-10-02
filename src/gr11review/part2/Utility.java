@@ -1,5 +1,7 @@
 package gr11review.part2;
 
+import java.io.*; 
+
 public class Utility {
 
     /**
@@ -64,11 +66,36 @@ public class Utility {
     /**
     * Given the name of a file, that contatins a single word on each line,
     * returns the word that has the highest amount of vowels
-    * @param 
+    * @param filenametxt - name of the file we're reading
     * @return String representing the word in the file with the most vowels
     */
-    public static String vowelCount(){
+    public static String vowelCount(String filenametxt){
+        //Reads through the file given the file name
+        try(BufferedReader br = new BufferedReader(new FileReader(filenametxt))) {
+            //Creates a String variable that will be assigned the String at each line
+            String x = "";
+            String strHighestVowel = "";
+            int intHighestVowelCount = 0;
+            int intVowelCount = 0;
+            // While we're still in the file and not at the end of the Strings
+            while((x = br.readLine()) != null){
+                // Loop through the string, count each vowel and assign it to a variable. If this variable is higher or equal to a previous word, assign the string to a variable, this will be the return variable
+                for(int i = 0; i < x.length() - 1; i++){
+                    char ch = Character.toLowerCase(x.charAt(i));
+                    if(ch == 97 || ch == 101 || ch == 105 || ch == 111 || ch == 117){
+                        intVowelCount++;
+                    }
+                }
+                // if the string had a higher or equal vowel count to any previous string, it is now the one with the most vowels
+                if(intVowelCount >= intHighestVowelCount){
+                    strHighestVowel = x;
+                    intHighestVowelCount = intVowelCount;
+                    intVowelCount = 0;
+                }
 
+            }
+            return strHighestVowel;
+        }
     }
 
     /**
