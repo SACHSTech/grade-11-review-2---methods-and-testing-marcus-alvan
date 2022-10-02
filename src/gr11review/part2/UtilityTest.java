@@ -35,4 +35,12 @@ public class UtilityTest{
     Assert.assertArrayEquals(new int[] {0,1}, Utility.zeroFront(new int[] {1,0}));
     Assert.assertArrayEquals(new int[] {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1}, Utility.zeroFront(new int[] {0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,1}));
   }
+
+  @Test void Array6Test(){
+    Assert.assertArrayEquals(new int[] {1,1,2,1,2,3,1,2,3,4,1,2,3,4,5}, Utility.seriesUp(5));
+    Assert.assertArrayEquals(new int[] {1,1,2,1,2,3,1,2,3,4}, Utility.seriesUp(4));
+    Assert.assertArrayEquals(new int[] {1}, Utility.seriesUp(1));
+    Assert.assertArrayEquals(new int[] {1,1,2,1,2,3,1,2,3,4,1,2,3,4,5,1,2,3,4,5,6,1,2,3,4,5,6,7,1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,10}, Utility.seriesUp(10));
+    Assert.assertArrayEquals(new int[] {}, Utility.seriesUp(0));
+  }
 }

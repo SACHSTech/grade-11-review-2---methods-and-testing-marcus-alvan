@@ -132,9 +132,6 @@ public class Utility {
             }
 
         }
-
-
-        
         return nums;
 
     }
@@ -148,7 +145,23 @@ public class Utility {
     */
 
     public static int[] seriesUp(int n){
+        int[] intPattern = new int[n * (n+1) / 2];
+        int i = 1;
+        int intIndexNum = 0;
 
+        // Variable i represents the lowest spot in the pattern. 1 being 1 and n being 1,2,3...n
+        while(i <= n){
+            // we run a for loop that will add the 1 for the pattern, and then switch to the next index
+            for(int j = 1; j <= i; j++){
+                intPattern[intIndexNum] += j;
+                intIndexNum++;
+            }
+            // we add to i to indicate the next stage of the pattern
+            i++;
+        }
+
+
+        return intPattern;
     }
 
     /**
