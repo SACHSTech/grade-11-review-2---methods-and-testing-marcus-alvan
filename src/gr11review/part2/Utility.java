@@ -105,7 +105,37 @@ public class Utility {
     * @param int[] x
     * @return An array with the zero's moved to the front
     */
-    public static int[] zeroFront(){
+    public static int[] zeroFront(int[] nums){
+        // we're going to go at this array from both left to right and right to left
+        // when we detect that the element on the left side is not 0 and the one on the right is, we swap them
+        int i = 0;
+        int j = nums.length - 1;
+
+        while(i<j){
+            int intLeftNum = nums[i];
+            int intRightNum = nums[j];
+            
+            // if the current left num is 0, we skip through it
+            if(intLeftNum == 0){
+                i++;
+            }
+            // if the current right num is not 0, we skip through it
+            if(intRightNum != 0){
+                j--;
+            }
+
+            if(intLeftNum != 0 && intRightNum == 0){
+                nums[i] = intRightNum;
+                nums[j] = intLeftNum;
+                i++;
+                i--;
+            }
+
+        }
+
+
+        
+        return nums;
 
     }
 
