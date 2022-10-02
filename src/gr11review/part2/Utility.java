@@ -171,7 +171,16 @@ public class Utility {
     * @return inverted 2D array
     */
     public static int[][] invert(int[][] arr){
+        int[][] invertedArr = new int[arr.length][arr[0].length];
 
+        for(int i = 0; i < arr.length; i++){
+            for(int j = 0; j < arr[0].length; i++){
+                int elem = arr[i][j];
+                invertedArr[j][i] = elem;
+            }
+        }
+
+        return invertedArr;
     }
     
 }
