@@ -4,7 +4,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
-import java.io.*;  
+import java.io.*;
+import java.util.Arrays;
 
 import gr11review.part2.Utility;
 
@@ -23,7 +24,9 @@ public class UtilityTest{
 
   @Test
   public void FileIO3Test(){
-    assertEquals("conservation", Utility.vowelCount("src\\gr11review\\test2\\Review2_3Test_1.txt"));
+    assertEquals("evolution", Utility.vowelCount("Review2_3Test_1.txt"));
+    assertEquals("preservation", Utility.vowelCount("Review2_3Test_3.txt"));
+    assertEquals("conservation", Utility.vowelCount("Review2_3Test_4.txt"));
   }
   
   @Test
@@ -47,6 +50,14 @@ public class UtilityTest{
 
   @Test
   public void Array9Test(){
-    Arrays
+    int test1[][] = {{1,2,3},{1,2,3},{1,2,3}};
+    int test1Expected[][] = {{1,1,1},{2,2,2},{3,3,3}};
+    assertTrue(Arrays.deepEquals(test1Expected, Utility.invert(test1)));
+    int test2[][] = {{3,2,1},{3,2,1},{3,2,1}};
+    int test2Expected[][] = {{3,3,3},{2,2,2},{1,1,1}};
+    assertTrue(Arrays.deepEquals(test2Expected, Utility.invert(test2)));
+    int test3[][] = {{9,9,9},{8,8,8},{7,7,7}};
+    int test3Expected[][] = {{9,8,7},{9,8,7},{9,8,7}};
+    assertTrue(Arrays.deepEquals(test3Expected, Utility.invert(test3)));
   }
 }

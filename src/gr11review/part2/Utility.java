@@ -70,8 +70,12 @@ public class Utility {
     * @return String representing the word in the file with the most vowels
     */
     public static String vowelCount(String filenametxt){
+        // Creates a string that will find the absolute path of a relative file
+        String filePath = new File("").getAbsolutePath();
         //Reads through the file given the file name
-        try(BufferedReader br = new BufferedReader(new FileReader(filenametxt))) {
+        
+        try{
+        BufferedReader br = new BufferedReader(new FileReader(filePath + "\\src\\gr11review\\test2\\" + filenametxt));
             //Creates a String variable that will be assigned the String at each line
             String x = "";
             String strHighestVowel = "";
@@ -94,8 +98,13 @@ public class Utility {
                 }
 
             }
+            br.close();
             return strHighestVowel;
         }
+        catch(IOException e)  {  
+            return filePath;
+            //return "don't work";  
+            }  
     }
 
     /**
@@ -174,7 +183,7 @@ public class Utility {
         int[][] invertedArr = new int[arr.length][arr[0].length];
 
         for(int i = 0; i < arr.length; i++){
-            for(int j = 0; j < arr[0].length; i++){
+            for(int j = 0; j <  arr[0].length; j++){
                 int elem = arr[i][j];
                 invertedArr[j][i] = elem;
             }
