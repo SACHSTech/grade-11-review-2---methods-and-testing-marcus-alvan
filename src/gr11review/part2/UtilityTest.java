@@ -15,7 +15,7 @@ public class UtilityTest{
     }
     @Test
     public void FileIO2Test()throws IOException{
-        assertEquals("advancedfunctions", Utility.alphaWord("src/gr11review/part2/FileIO2Test1.txt"));
+        assertEquals("advancedfunctions", Utility.alphaWord("/src/gr11review/part2/FileIO2Test1.txt"));
         assertEquals("brawlball", Utility.alphaWord("src/gr11review/part2/FileIO2Test2.txt"));
         assertEquals("adidas", Utility.alphaWord("src/gr11review/part2/FileIO2Test3.txt"));
     }
