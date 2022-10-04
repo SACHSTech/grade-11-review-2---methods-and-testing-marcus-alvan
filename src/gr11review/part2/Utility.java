@@ -38,10 +38,12 @@ public class Utility{
     * @author Alvan Chui
     */
     public static String alphaWord(String filenametxt) throws IOException{
+        String filepath = new File("").getAbsolutePath();
+        String fullFilePath = filepath + "/bin/gr11review/part2/" + filenametxt;
         //declare variables
         String firstword;
         ArrayList<String> words = new ArrayList<String>();
-        File txtfile = new File(filenametxt);
+        File txtfile = new File(fullFilePath);
         Scanner Reader = new Scanner(txtfile);
         //read the file and store every words in the arraylist
         while (Reader.hasNextLine()){
