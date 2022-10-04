@@ -72,15 +72,17 @@ public class Utility {
     public static String vowelCount(String filenametxt){
         // Creates a string that will find the absolute path of a relative file
         String filePath = new File("").getAbsolutePath();
+        String fullFilePath = filePath + "/src/gr11review/test2/";
         //Reads through the file given the file name
         
         try{
-        BufferedReader br = new BufferedReader(new FileReader(filePath + "\\src\\gr11review\\test2\\" + filenametxt));
+        BufferedReader br = new BufferedReader(new FileReader(fullFilePath + filenametxt));
             //Creates a String variable that will be assigned the String at each line
             String x = "";
             String strHighestVowel = "";
             int intHighestVowelCount = 0;
             int intVowelCount = 0;
+
             // While we're still in the file and not at the end of the Strings
             while((x = br.readLine()) != null){
                 // Loop through the string, count each vowel and assign it to a variable. If this variable is higher or equal to a previous word, assign the string to a variable, this will be the return variable
@@ -102,8 +104,9 @@ public class Utility {
             return strHighestVowel;
         }
         catch(IOException e)  {  
-            return filePath;
+            //return fullFilePath + filenametxt;
             //return "don't work";  
+            return e.getMessage();
             }  
     }
 
