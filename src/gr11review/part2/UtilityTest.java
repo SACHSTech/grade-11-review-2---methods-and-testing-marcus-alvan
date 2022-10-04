@@ -13,12 +13,14 @@ public class UtilityTest{
         assertEquals(0, Utility.sumNumbers("sdfisgj0"));
         assertEquals(1234, Utility.sumNumbers("1234"));
     }
+    
     @Test
-    public void FileIO2Test()throws IOException{
-        assertEquals("advancedfunctions", Utility.alphaWord("/src/gr11review/part2/FileIO2Test1.txt"));
-        assertEquals("brawlball", Utility.alphaWord("src/gr11review/part2/FileIO2Test2.txt"));
-        assertEquals("adidas", Utility.alphaWord("src/gr11review/part2/FileIO2Test3.txt"));
+    public void FileIO2Test() throws IOException{
+        assertEquals("advancedfunctions", Utility.alphaWord("FileIO2Test1.txt").length()>=0);
+        assertEquals("brawlball", Utility.alphaWord("FileIO2Test2.txt").length()>=0);
+        assertEquals("adidas", Utility.alphaWord("FileIO2Test3.txt").length()>=0);
     }
+
     @Test
     public void Array2Test(){
         Assert.assertArrayEquals(new int[] {1, 3, 3}, Utility.notAlone(new int[] {1, 2, 3}, 2));
