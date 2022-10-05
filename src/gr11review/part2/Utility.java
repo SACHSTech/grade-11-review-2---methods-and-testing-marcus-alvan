@@ -72,11 +72,11 @@ public class Utility {
     public static String vowelCount(String filenametxt){
         // Creates a string that will find the absolute path of a relative file
         String filePath = new File("").getAbsolutePath();
-        String fullFilePath = filePath + "/bin/gr11review/test2/";
+        String fullFilePath = filePath + "/bin/gr11review/test2/"  + filenametxt;
         //Reads through the file given the file name
         
         try{
-        BufferedReader br = new BufferedReader(new FileReader(fullFilePath + filenametxt));
+        BufferedReader br = new BufferedReader(new FileReader(fullFilePath));
             //Creates a String variable that will be assigned the String at each line
             String x = "";
             String strHighestVowel = "";
