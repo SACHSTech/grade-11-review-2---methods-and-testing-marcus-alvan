@@ -6,14 +6,14 @@ import java.io.IOException;
 
 import java.io.*; 
 
-/*
- * Description: A collection of methods that solve questions about given data
- * @author John Matthew Kassapian
- */
+
 
 public class Utility {
         
-
+    /*
+    * Description: A collection of methods that solve questions about given data
+    * @author John Matthew Kassapian
+    */
 
     /**
     * Given a string, determines if "xyz" appears in the middle of the string
@@ -223,6 +223,7 @@ public class Utility {
                     }
                 }
 
+                // Marcus Code
                 /*
                  * Run through a file and return the longest word in the file
                  * @param1 filenametxt the file being read
