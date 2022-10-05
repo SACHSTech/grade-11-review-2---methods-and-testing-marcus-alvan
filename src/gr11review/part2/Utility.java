@@ -20,6 +20,7 @@ public class Utility {
                 }
 
                 /*
+                 * Checks if for every x char in the string, there is a y char after the string
                  * @param1 String str The string being analyzed
                  * @return true if balanced, false if unbalanced
                  */
@@ -37,6 +38,7 @@ public class Utility {
                 }
 
                 /*
+                 * Run through a file and return the longest word in the file
                  * @param1 filenametxt the file being read
                  * @return the longest word in the file
                  */
@@ -66,6 +68,7 @@ public class Utility {
                 }
 
                 /*
+                 * Take an array and print a version of it where all 10s have been removed, shifting any other element in the array to the left
                  * @param1 nums the array being used
                  * @return nums with every 10 changed to a 0 and moved to the end of the array
                  */
@@ -83,6 +86,7 @@ public class Utility {
                 }
 
                 /*
+                 * Given an inner array and outer array, check if every element in the inner array appears in the outer array
                  * @param1 outer the outer array
                  * @param2 inner the inner array
                  * @return true if every number in the inner array is in the outer array, otherwise return false
@@ -107,7 +111,8 @@ public class Utility {
                     }
                 }
                 
-                /*
+                /*   
+                 * Swap all of the contents in an array(s) so that the first element is the last element and the last element is first
                  * @param1 arr the 2D array
                  * @return arr but with all of its contents reversed(i.e ({1, 2, 3}, {4, 5, 6} = {6, 5, 4}{3, 2, 1}))
                  */
