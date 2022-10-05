@@ -9,7 +9,6 @@
             "name": "Launch Utility",
             "request": "launch",
             "mainClass": "gr11review.part2.Utility",
-            "projectName": "grade-11-review-2---methods-and-testing-marcus-alvan_660168de"
         },
         {
             "type": "java",
