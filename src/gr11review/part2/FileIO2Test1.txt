@@ -1,0 +1,7 @@
+compsci
+religion
+philosophy
+english
+compeng
+calculusandvectors
+advancedfunctions
