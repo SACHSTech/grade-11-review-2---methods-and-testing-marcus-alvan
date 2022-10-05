@@ -29,12 +29,12 @@ public class UtilityTest{
         // System.out.println("This is where my files are");
         // System.out.println(Arrays.toString(new File(".").list()));
         
-        assertEquals("consectetur", Utility.longestWord("src/gr11review/part2/words.txt"));
+        assertEquals("consectetur", Utility.longestWord("words.txt"));
     }
 
     @Test
     public void FileIOTest2(){
-        assertEquals("League of Legends", Utility.longestWord("src/gr11review/part2/GameNames.txt"));
+        assertEquals("League of Legends", Utility.longestWord("GameNames.txt"));
     }
 
     @Test
@@ -48,22 +48,32 @@ public class UtilityTest{
     }
 
     @Test
-    public void Array2Test1(){
+    public void Array4Test1(){
     assertEquals(true, Utility.linearIn(new int[]{1, 2, 4, 6}, new int[]{2, 4}));
     }
 
     @Test
-    public void Array2Test2(){
+    public void Array4Test2(){
     assertEquals(false, Utility.linearIn(new int[]{3, 5}, new int[]{3, 5, 20}));
     }
 
     @Test
-    public void Array2Test3(){
+    public void Array4Test3(){
     assertEquals(true, Utility.linearIn(new int[]{10, 6, 33, 59, 4, 7, 16}, new int[]{4, 7}));
     }
 
     @Test
-    public void TwoDArrayTest1(){
+    public void Array7Test1(){
     assertArrayEquals(new int[][]{{9, 8, 7},{6, 5, 4},{3,2,1}}, Utility.reverse(new int[][]{{1,2,3},{4,5,6},{7,8,9}}));
+    }
+
+    @Test
+    public void Array7Test2(){
+    assertArrayEquals(new int[][]{{6, 8, 10, 12, 14, 16},{18, 20, 22, 24, 26, 28}}, Utility.reverse(new int[][]{{28, 26, 24, 22, 20, 18}, {16, 14, 12, 10, 8, 6}}));
+    }
+
+    @Test
+    public void Array7Test3(){
+    assertArrayEquals(new int[][]{{10, 7, 4},{}}, Utility.reverse(new int[][]{{}, {4, 7, 10}}));
     }
 }
