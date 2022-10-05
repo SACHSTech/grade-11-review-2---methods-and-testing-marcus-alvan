@@ -46,6 +46,7 @@ public class UtilityTest{
         Assert.assertArrayEquals(new int[][] {{2,65,30},{24,13,5}}, Utility.split(new int[][] {{2,65,30},{24,13,5},{56,27,12}}, 1, 2));
         Assert.assertArrayEquals(new int[][] {{1}}, Utility.split(new int[][] {{1,1,1,1},{1,1,1,1},{1,1,1,1},{1,1,1,1}}, 0, 0));
         Assert.assertArrayEquals(new int[][] {{2,4,8,16},{32,64,128,256}}, Utility.split(new int[][] {{2,4,8,16},{32,64,128,256}}, 1, 3));
+    }
   //End of Alvan's test
 
   //Start of Matthew's test
@@ -170,3 +171,4 @@ public class UtilityTest{
     }
     //End of Marcus's code
 }
+
