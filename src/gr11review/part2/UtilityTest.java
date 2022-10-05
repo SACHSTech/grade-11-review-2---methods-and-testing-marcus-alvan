@@ -31,10 +31,14 @@ public class UtilityTest{
     public void Array5Test(){
         assertTrue(Utility.canBalance(new int[] {1, 2, 1, 1, 1}));
         assertFalse(Utility.canBalance(new int[] {1, 2, 3, 2, 3}));
-        assertTrue(Utility.canBalance(new int[] {1, 2, 3, 3, 2, 1}));
+        assertTrue(Utility.canBalance(new int[] {1, 5, 10 ,10 , 5, 1}));
+        assertFalse(Utility.canBalance(new int[] {1}));
     }
     @Test
     public void Array8Test(){
         Assert.assertArrayEquals(new int[][] {{1,2},{4,5}}, Utility.split(new int[][] {{1,2,3},{4,5,6},{7,8,9}}, 1, 1));
+        Assert.assertArrayEquals(new int[][] {{2,65,30},{24,13,5}}, Utility.split(new int[][] {{2,65,30},{24,13,5},{56,27,12}}, 1, 2));
+        Assert.assertArrayEquals(new int[][] {{1}}, Utility.split(new int[][] {{1,1,1,1},{1,1,1,1},{1,1,1,1},{1,1,1,1}}, 0, 0));
+        Assert.assertArrayEquals(new int[][] {{2,4,8,16},{32,64,128,256}}, Utility.split(new int[][] {{2,4,8,16},{32,64,128,256}}, 1, 3));
     }
 }
