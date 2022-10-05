@@ -2,6 +2,11 @@ package gr11review.part2;
 
 import java.io.*; 
 
+/*
+ * Description: A collection of methods that solve questions about given data
+ * @author John Matthew Kassapian
+ */
+
 public class Utility {
 
     /**
